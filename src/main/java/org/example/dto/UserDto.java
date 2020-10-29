@@ -4,7 +4,7 @@ public class UserDto {
     private String name;
     private Long identity;
     private String phone;
-    private Long income;
+    private Long inCome;
 
     public String getName() {
         return name;
@@ -30,11 +30,11 @@ public class UserDto {
         this.phone = phone;
     }
 
-    public Long getIncome() {
-        return income;
+    public Long getInCome() {
+        return inCome;
     }
 
-    public void setIncome(Long income) {
-        this.income = income;
+    public void setInCome(Long inCome) {
+        this.inCome = inCome;
     }
 }

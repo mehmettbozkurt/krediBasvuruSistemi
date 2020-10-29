@@ -71,7 +71,7 @@
             var formData = {
                 identity : $("input[name=identity]").val(),
                 name     : $("input[name=name]").val(),
-                income   : $("input[name=income]").val(),
+                inCome   : $("input[name=income]").val(),
                 phone    : $("input[name=phone]").val()
             }
 
@@ -83,12 +83,12 @@
                 data : JSON.stringify(formData),
                 dataType : 'json',
                 success : function(result) {
-                    if(result.status == 1){
+                    if(result.creditStatus == 1){
                         $("#userForm").css("display","none");
                         $("#postResultSuccess,#new_button").css("display","block");
-                        $("#postResultSuccess").html('<p> Sayın '+result.name+'; <br> <br>'+result.total+' Tutarında Kredi Alabilirsiniz.</p>');
+                        $("#postResultSuccess").html('<p> Sayın '+result.name+'; <br> <br>'+result.creditAmount+' Tutarında Kredi Alabilirsiniz.</p>');
 
-                        if (result.income >= 5000 && result.creditscore >= 500 && result.creditscore<= 1000){
+                        if (result.inCome >= 5000 && result.creditScore >= 500 && result.creditScore<= 1000){
                             $("#postResultSuccess").append("<p style='color:black;'><strong>Not:</strong> Kredi Skoru 500 - 1000 arası ve aylık gelirin 5000'den büyük olması durumu taskta belirtilmediği için bu mesaj verilmiştir.</p>");
 
                         }
@@ -105,15 +105,11 @@
                 }
             });
 
-            // Reset FormData after Posting
-            resetData();
+
 
         }
 
-        function resetData(){
-            $("#firstname").val("");
-            $("#lastname").val("");
-        }
+
     })
 </script>
 </body>

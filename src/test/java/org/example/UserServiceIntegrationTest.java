@@ -6,7 +6,6 @@ import static org.mockito.Mockito.when;
 import java.util.Arrays;
 import java.util.List;
 
-import org.example.config.Gender;
 import org.example.domain.User;
 import org.example.repository.UserRepository;
 import org.example.service.UserService;
@@ -43,7 +42,7 @@ public class UserServiceIntegrationTest {
         for(User user : users)
         	System.out.printf("Name=%s, CreditScore=%s \n"
         			, user.getName()
-        			, user.getCreditscore()
+        			, user.getCreditScore()
         			 );
         
         assertThat(users.get(0).getName())

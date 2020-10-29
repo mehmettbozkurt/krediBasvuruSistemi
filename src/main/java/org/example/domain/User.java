@@ -1,19 +1,11 @@
 package org.example.domain;
-
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-import org.example.config.Gender;
-import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name = "user")
@@ -23,15 +15,15 @@ public class User implements Cloneable{
 
 	}
 
-	public User(String name, String phone, Long identity, Long creditscore, Long income,Long total, Boolean status) {
+	public User(String name, String phone, Long identity, Long creditScore, Long inCome,Long creditAmount, Boolean creditStatus) {
 
 		this.setName(name);
 		this.setPhone(phone);
-		this.setCreditscore(creditscore);
+		this.setCreditScore(creditScore);
 		this.setIdentity(identity);
-		this.setIncome(income);
-		this.setStatus(status);
-		this.setTotal(total);
+		this.setInCome(inCome);
+		this.setCreditStatus(creditStatus);
+		this.setCreditAmount(creditAmount);
 
 	}
 
@@ -46,13 +38,13 @@ public class User implements Cloneable{
 
 	private String phone;
 
-	private Long income;
+	private Long inCome;
 
-	private Long creditscore;
+	private Long creditScore;
 
-	private Long total;
+	private Long creditAmount;
 
-	private Boolean status;
+	private Boolean creditStatus;
 
 	public Long getId() {
 		return id;
@@ -86,35 +78,35 @@ public class User implements Cloneable{
 		this.phone = phone;
 	}
 
-	public Long getIncome() {
-		return income;
+	public Long getInCome() {
+		return inCome;
 	}
 
-	public void setIncome(Long income) {
-		this.income = income;
+	public void setInCome(Long inCome) {
+		this.inCome = inCome;
 	}
 
-	public Long getCreditscore() {
-		return creditscore;
+	public Long getCreditScore() {
+		return creditScore;
 	}
 
-	public void setCreditscore(Long creditscore) {
-		this.creditscore = creditscore;
+	public void setCreditScore(Long creditScore) {
+		this.creditScore = creditScore;
 	}
 
-	public Boolean getStatus() {
-		return status;
+	public Long getCreditAmount() {
+		return creditAmount;
 	}
 
-	public void setStatus(Boolean status) {
-		this.status = status;
+	public void setCreditAmount(Long creditAmount) {
+		this.creditAmount = creditAmount;
 	}
 
-	public Long getTotal() {
-		return total;
+	public Boolean getCreditStatus() {
+		return creditStatus;
 	}
 
-	public void setTotal(Long total) {
-		this.total = total;
+	public void setCreditStatus(Boolean creditStatus) {
+		this.creditStatus = creditStatus;
 	}
 }

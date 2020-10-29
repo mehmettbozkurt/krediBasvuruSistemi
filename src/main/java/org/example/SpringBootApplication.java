@@ -2,8 +2,6 @@ package org.example;
 
 import org.springframework.boot.SpringApplication;
 
-
-
 @org.springframework.boot.autoconfigure.SpringBootApplication
 public class SpringBootApplication {
   

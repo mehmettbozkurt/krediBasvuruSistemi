@@ -11,9 +11,9 @@ CREATE TABLE `user` (
   `name` varchar(100) NOT NULL,
   `identity` bigint(20) NOT NULL,
   `phone` varchar(100) NOT NULL,
-  `income` int(100) NOT NULL,
-  `creditscore` int(100) NOT NULL,
-  `total` bigint(20) NOT NULL,
-  `status` bit(1) DEFAULT NULL,
+  `in_come` int(100) NOT NULL,
+  `credit_score` int(100) NOT NULL,
+  `credit_amount` bigint(20) NOT NULL,
+  `credit_status` bit(1) DEFAULT NULL,
    PRIMARY KEY (`id`)
 )
